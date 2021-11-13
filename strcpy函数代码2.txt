@@ -1,0 +1,15 @@
+char* StrCpy(char* src,char* dest)
+{
+char *src = "hello,world";
+  char *dest = NULL;
+  int len=strlen(src);
+  dest = (char*)malloc(sizeof(char)*len+1);
+  char *_dest = dest;
+  char *_src = NULL;
+  _src = &src[len-1];
+  while(len-- != 0){
+  *_dest++ = *_src--;
+
+}
+printf("%s", dest);
+free(dest);
